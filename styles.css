@@ -25,7 +25,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgb(240, 199, 158);
+    background-color: bisque;
 }
 
 .title {
@@ -35,7 +35,7 @@ body {
 }
 
 .header {
-    background-color: bisque;
+    background-color: rgb(240, 199, 158);
     height: 10rem;
     display: flex;
     align-items: center;
@@ -49,6 +49,7 @@ body {
     /*background-color: aqua; */
     display: flex;
     justify-content: space-evenly;
+    padding-bottom: .2em;
 }
 
 .button-container > .button {
@@ -59,10 +60,11 @@ body {
     color: rgb(158, 44, 15);
     cursor: pointer;
     text-transform: capitalize;
+    font-weight: 900;
 }
 
 .button-container > .button:hover {
-    background-color: rgb(226, 184, 177);
+    background-color: rgb(219, 174, 166);
 }
 
 .menu-container {
@@ -95,7 +97,7 @@ img {
 }
 
 .footer-container {
-    background-color: bisque;
+    background-color: rgb(240, 199, 158);
     height: 10rem;
     display: grid;
 }

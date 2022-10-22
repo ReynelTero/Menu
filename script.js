@@ -87,7 +87,7 @@ function viewMenuItems(items) {
     
         return `<section class="menu-container">
                     <div class="menu">
-                        <img src=${item.img} class="photo" alt=${item.img}>
+                        <img src=${item.img} class="photo" alt=${item.img} loading="lazy">
                         <h3>${item.name}</h3>
                         <hr>
                         <p>${item.info}</p>
@@ -117,7 +117,7 @@ function viewMenuButtons() {
     categoryBtns = categoryBtns.join("");
     buttonContainer.innerHTML = categoryBtns;
 
-    
+
     const buttons = buttonContainer.querySelectorAll('.button');
 
     buttons.forEach(btn => {

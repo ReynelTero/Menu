@@ -121,7 +121,7 @@ function viewMenuButtons() {
     const buttons = buttonContainer.querySelectorAll('.button');
 
     buttons.forEach(btn => {
-        btn.addEventListener('click', (filteredId) => {
+        btn.addEventListener('click', filteredId => {
             const category = filteredId.currentTarget.dataset.id;
             const menuItemsCategory = menu.filter(items => {
     
@@ -129,14 +129,7 @@ function viewMenuButtons() {
                     return items;
                 }
             });
-    
-            if (category === 'all') {
-                viewMenuItems(menu);
-            }
-    
-            else {
-                viewMenuItems(menuItemsCategory);
-            }
+            (category === 'all') ? viewMenuItems(menu) : viewMenuItems(menuItemsCategory);
         });
     });
 }

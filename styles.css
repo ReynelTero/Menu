@@ -6,130 +6,135 @@
     box-sizing: border-box;
 }
 
-h3 {
-    font-size: 1.5rem;
+:root {
+    --clr-light: bisque;
+    --clr-red: rgb(158, 44, 15);
+    --clr-btn: rgb(216, 167, 155);
+    --clr-dark: rgb(240, 199, 158);
+    --clr-border-img: rgb(192, 58, 24);
+    --clr-btn-hover: rgb(219, 174, 166);
 }
 
+h3,
 h4 {
     font-size: 1.5rem;
 }
 
 body {
-    font-family: 'Hind Madurai', sans-serif;
     min-height: 100vh;
     min-width: 100vw;
+    font-family: 'Hind Madurai', sans-serif;
 }
 
 .container {
-    min-height: 100vh;
     display: flex;
+    min-height: 100vh;
     flex-direction: column;
     justify-content: space-between;
-    background-color: bisque;
+    background-color: var(--clr-light);
 }
 
 .title {
-    padding-top: 3rem;
     font-size: 2.3em;
-    color: rgb(158, 44, 15);
+    padding-top: 3rem;
+    color: var(--clr-red);
 }
 
 .header {
-    background-color: rgb(240, 199, 158);
     height: 10rem;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content:space-around;
+    background-color: var(--clr-dark);
 }
 
 .button-container {
-    max-width: 750px;
     width: 50%;
-    /*background-color: aqua; */
     display: flex;
-    justify-content: space-evenly;
+    max-width: 750px;
     padding-bottom: .2em;
+    /*background-color: aqua; */
+    justify-content: space-evenly;
 }
 
 .button-container > .button {
+    border: none;
+    cursor: pointer;
+    font-weight: 900;
     padding: .2em 1em;
     border-radius: 10px;
-    border: none;
-    background-color: rgb(216, 167, 155);
-    color: rgb(158, 44, 15);
-    cursor: pointer;
+    color: var(--clr-red);
     text-transform: capitalize;
-    font-weight: 900;
+    background-color: var(--clr-btn);
 }
 
 .button-container > .button:hover {
-    background-color: rgb(219, 174, 166);
+    background-color: var(--clr-btn-hover);
 }
 
 .menu-container {
     width:100%;
-    max-width: 750px;
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
+    margin: 0 auto;
+    max-width: 750px;
     padding-top: 4rem;
     /*background-color: aquamarine;*/
     padding-left: .2rem;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .menu {
     /* background-color: blueviolet; */
     width: 15rem;
+    display: flex;
+    margin-top: -3rem;
     text-align: center;
     height: max-content; 
-    display: flex;
     flex-direction: column;
-    margin-top: -3rem;
 }
 
 img {
     width: 100%;
     object-fit:none;
-    border: .3em solid rgb(192, 58, 24);
     border-radius: 15px;
+    border: .3em solid var(--clr-border-img);
 }
 
 .footer-container {
-    background-color: rgb(240, 199, 158);
     height: 10rem;
     display: grid;
+    background-color: var(--clr-dark);
 }
 
 .footer {
     /* background-color: rgb(156, 156, 199); */
-    max-width: 750px;
     width: 70%;
     margin: auto;
     display: flex;
-    flex-direction: column;
+    max-width: 750px;
+    line-height: 1.8em;
     align-items: center;
     /* color: white; */
+    flex-direction: column;
     justify-content: center;
-    line-height: 1.8em;
 }
 
 @media screen and (max-width: 768px) {
 
     .menu-container {
-        grid-template-columns: repeat(2, 1fr);
         max-width: 500px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
-
 
 @media screen and (max-width: 500px) {
 
     .menu-container {
         display: flex;
-        flex-direction: column;
         align-items: center;
+        flex-direction: column;
 
     }
 }
@@ -138,8 +143,8 @@ img {
 
     .menu-container {
         display: flex;
-        flex-direction: column;
         align-items: center;
+        flex-direction: column;
     }
 }
 
